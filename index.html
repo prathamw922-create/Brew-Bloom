@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew & Bloom | Cafe & Floral Experience | Bhosari, Pune</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Welcome to Brew & Bloom, a premium floral-themed cafe in Indrayani Nagar, Bhosari, Pune. Indulge in specialty hot brews, cold dessert coffees, Belgian waffles, paneer burgers, and cozy vibes.">
+    <meta name="keywords" content="Cafe Bhosari, Coffee Shop Indrayani Nagar, Brew & Bloom, The Street Coffee Bhosari, Waffles Pune, Burger Bhosari, Restaurant Bhosari, Best Coffee Pune">
+    <meta name="author" content="Brew & Bloom">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Brew & Bloom | Cafe & Floral Experience | Bhosari, Pune">
+    <meta property="og:description" content="Experience where rich specialty coffee meets botanical elegance in Bhosari. Explore our menu, order online, or reserve a cozy table today.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brewandbloom.cafe">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navigation Bar -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo" id="logo-link">
+                <div class="logo-icon"><i class="fas fa-coffee"></i></div>
+                Brew & <span>Bloom</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#menu" class="nav-link">Our Menu</a>
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#reserve" class="nav-link">Book a Table</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="nav-actions">
+                <button class="action-btn" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="action-btn" id="cart-btn" aria-label="Open Shopping Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" style="display: none;">0</span>
+                </button>
+                <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-seedling"></i> Floral Cafe Vibe
+                    </div>
+                    <h1 class="hero-title">Where Coffee Meets <span>Floral Elegance</span></h1>
+                    <p class="hero-text">Escape into a lush botanical sanctuary. Indulge in artisanal specialty coffees, freshly baked Belgian waffles, and premium quick bites crafted with passion in Bhosari.</p>
+                    <div class="hero-actions">
+                        <a href="#menu" class="btn btn-primary" id="hero-menu-btn">
+                            Explore Menu <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#reserve" class="btn btn-secondary" id="hero-reserve-btn">
+                            Book a Table
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features / Experience Section -->
+        <section class="section-padding container">
+            <div class="section-header text-center">
+                <span class="subtitle">The Vibe</span>
+                <h2 class="title">The Brew & Bloom Experience</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-mug-hot"></i></div>
+                    <h3 class="feature-title">Artisanal Brews</h3>
+                    <p class="feature-desc">100% Single-Origin Arabica beans, custom-roasted and brewed to absolute perfection by skilled baristas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3 class="feature-title">Botanical Vibe</h3>
+                    <p class="feature-desc">Unwind surrounded by lush floral arrangements, cascading vines, and soothing lighting designed to refresh your soul.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-cheese"></i></div>
+                    <h3 class="feature-title">Gourmet Treats</h3>
+                    <p class="feature-desc">From hot Nutella Belgian waffles to crispy Peri Peri burgers, our kitchen cooks up delicious, fresh gourmet bites daily.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-wifi"></i></div>
+                    <h3 class="feature-title">Creative Space</h3>
+                    <p class="feature-desc">Equipped with high-speed internet and cozy nooks, it is the perfect spot for remote work, read, or deep conversations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Menu Section -->
+        <section class="section-padding" id="menu" style="background: rgba(192, 130, 97, 0.03);">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="subtitle">Fresh Delicacies</span>
+                    <h2 class="title">Explore Our Curated Menu</h2>
+                </div>
+                
+                <div class="menu-controls">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" id="search-input" placeholder="Search menu (e.g. Latte, Waffle)..." aria-label="Search Cafe Menu">
+                    </div>
+                    
+                    <div class="menu-categories">
+                        <button class="category-btn active" data-category="all" id="btn-cat-all">All Items</button>
+                        <button class="category-btn" data-category="hot-brews" id="btn-cat-hot">Hot Brews</button>
+                        <button class="category-btn" data-category="cold-brews" id="btn-cat-cold">Cold Rocks</button>
+                        <button class="category-btn" data-category="fast-food" id="btn-cat-food">Fast Food</button>
+                        <button class="category-btn" data-category="desserts" id="btn-cat-desserts">Waffles & Sweets</button>
+                        <button class="category-btn" data-category="refreshers" id="btn-cat-refresh">Refreshers</button>
+                    </div>
+                </div>
+                
+                <div class="menu-grid" id="menu-grid">
+                    <!-- Cards will be dynamically injected here by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="section-padding container" id="about">
+            <div class="about-split">
+                <div class="about-img-frame">
+                    <img src="assets/specialty_latte_art.png" alt="Brew & Bloom coffee craft and flowers" loading="lazy">
+                </div>
+                <div class="about-details">
+                    <div class="section-header">
+                        <span class="subtitle">Our Roots</span>
+                        <h2 class="title">Crafting Moments of Pure Joy</h2>
+                    </div>
+                    <p class="about-p">Established in Indrayani Nagar, Bhosari, Brew & Bloom was born from a simple dream: to merge the rich, robust heritage of specialty coffee with the refreshing peace of botanical floral displays.</p>
+                    <p class="about-p">Whether you're visiting for an early morning espresso shot, grabbing a crispy Peri Peri Paneer Burger for lunch, or spending an evening sharing Belgian waffles, we craft every order to be a sensory highlight of your day.</p>
+                    
+                    <div class="about-metrics">
+                        <div class="metric-item">
+                            <div class="metric-num">12+</div>
+                            <div class="metric-lbl">House Blends</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-num">150+</div>
+                            <div class="metric-lbl">Plants & Flowers</div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="metric-num">98%</div>
+                            <div class="metric-lbl">Happy Reviews</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table Reservation Section -->
+        <section class="section-padding" id="reserve" style="background: rgba(143, 151, 121, 0.05);">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="subtitle">Secure Your Spot</span>
+                    <h2 class="title">Interactive Table Reservation</h2>
+                </div>
+                
+                <div class="reserve-card">
+                    <div class="reserve-info-col">
+                        <h3 class="reserve-info-title">Plan Your Botanical Visit</h3>
+                        <p class="reserve-info-p">To ensure a cozy and uninterrupted experience, select your preferred table node on our visual floor layout and book your table instantly. Ideal for business catch-ups, private dates, or quiet work sessions.</p>
+                        
+                        <div class="reserve-benefits">
+                            <div class="benefit-item">
+                                <div class="benefit-check"><i class="fas fa-check"></i></div>
+                                <span>No reservation fee or deposit required</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-check"><i class="fas fa-check"></i></div>
+                                <span>Table held for 20 minutes past booking time</span>
+                            </div>
+                            <div class="benefit-item">
+                                <div class="benefit-check"><i class="fas fa-check"></i></div>
+                                <span>Complimentary floral tea shot on arrival</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="reserve-form-col">
+                        <div class="table-map-box">
+                            <span class="table-map-title">Interactive Floor Plan</span>
+                            <div class="table-layout">
+                                <div class="table-node available" data-table="1">T-1 (2p)</div>
+                                <div class="table-node reserved" data-table="2">T-2 (4p)</div>
+                                <div class="table-node available" data-table="3">T-3 (2p)</div>
+                                <div class="table-node available" data-table="4">T-4 (6p)</div>
+                                <div class="table-node available" data-table="5">T-5 (4p)</div>
+                                <div class="table-node reserved" data-table="6">T-6 (2p)</div>
+                                <div class="table-node available" data-table="7">T-7 (4p)</div>
+                                <div class="table-node available" data-table="8">T-8 (2p)</div>
+                            </div>
+                        </div>
+                        
+                        <form id="reservation-form">
+                            <div class="form-group">
+                                <label for="reserve-name">Your Full Name</label>
+                                <input type="text" id="reserve-name" required placeholder="Enter name">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reserve-guests">Number of Guests</label>
+                                    <select id="reserve-guests" required>
+                                        <option value="1">1 Guest</option>
+                                        <option value="2" selected>2 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="6">6+ Guests</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="reserve-time">Booking Time</label>
+                                    <select id="reserve-time" required>
+                                        <option value="10:00 AM">10:00 AM</option>
+                                        <option value="12:00 PM">12:00 PM</option>
+                                        <option value="02:00 PM">02:00 PM</option>
+                                        <option value="04:00 PM">04:00 PM</option>
+                                        <option value="06:00 PM" selected>06:00 PM</option>
+                                        <option value="08:00 PM">08:00 PM</option>
+                                        <option value="10:00 PM">10:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="reserve-date">Date</label>
+                                <input type="date" id="reserve-date" required value="2026-06-07">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary reserve-btn" id="submit-reserve-btn">
+                                Confirm Reservation <i class="far fa-calendar-check"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section-padding container">
+            <div class="section-header text-center">
+                <span class="subtitle">Vibe Check</span>
+                <h2 class="title">Love From Our Guests</h2>
+            </div>
+            
+            <div class="slider-container" id="reviews-slider">
+                <div class="slides-wrapper" id="slides-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="review-text">"The ambiance is absolutely dream-like. Sipping a Hazelnut Latte surrounded by fresh flowers is the perfect weekend escape. Truly a gem in Bhosari!"</p>
+                            <h4 class="review-author">Priya Sharma</h4>
+                            <span class="review-role">Local Food Blogger</span>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="review-text">"The Peri Peri Paneer Burger is out of this world! Perfect balance of spice, and the service was quick. The table reservation feature online saved us a lot of wait time."</p>
+                            <h4 class="review-author">Rahul Deshmukh</h4>
+                            <span class="review-role">Tech Professional</span>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="review-slide">
+                        <div class="review-card">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p class="review-text">"Brew & Bloom has become my go-to remote workspace. High-speed internet, beautiful visual greenery, and outstanding Belgian waffles. Love the dark mode theme too!"</p>
+                            <h4 class="review-author">Amit Patel</h4>
+                            <span class="review-role">Freelance Designer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-dots" id="slider-dots">
+                    <!-- Dots will be dynamically injected here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Info Section -->
+        <section class="section-padding container" id="contact">
+            <div class="section-header text-center">
+                <span class="subtitle">Drop By</span>
+                <h2 class="title">Find Our Cafe</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info-col">
+                    <div class="contact-info-card">
+                        <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3 class="contact-card-title">Our Sanctuary</h3>
+                            <p class="contact-card-text">Shop No. 3, Kusum Kunj Apartment,<br>Sector 1, Indrayani Nagar,<br>Bhosari, Pune, MH - 411039</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <h3 class="contact-card-title">Give a Ring</h3>
+                            <p class="contact-card-text">+91 90118 57589</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-card">
+                        <div class="contact-card-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h3 class="contact-card-title">Opening Hours</h3>
+                            <p class="contact-card-text">Monday - Sunday<br>10:00 AM – 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-card">
+                    <div class="map-wrap">
+                        <div class="mock-map-bg">
+                            <!-- SVG lines mock a grid mapping system -->
+                            <div class="map-grid-line" style="top: 20%; left: 0; width: 100%; height: 1px;"></div>
+                            <div class="map-grid-line" style="top: 50%; left: 0; width: 100%; height: 1px;"></div>
+                            <div class="map-grid-line" style="top: 75%; left: 0; width: 100%; height: 1px;"></div>
+                            <div class="map-grid-line" style="left: 30%; top: 0; width: 1px; height: 100%;"></div>
+                            <div class="map-grid-line" style="left: 60%; top: 0; width: 1px; height: 100%;"></div>
+                            <div class="map-pin">
+                                <i class="fas fa-map-pin map-pin-icon"></i>
+                                <div class="map-pin-pulse"></div>
+                                <br>
+                                <div class="map-tooltip">Brew & Bloom Cafe</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Slide-out Drawer -->
+    <div class="cart-drawer-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3 class="cart-title">Your Delicacies</h3>
+            <button class="cart-close-btn" id="cart-close" aria-label="Close Shopping Cart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="cart-items-wrap" id="cart-items">
+            <!-- Items injected by app.js -->
+        </div>
+        
+        <div class="cart-footer">
+            <div class="cart-summary-row">
+                <span class="cart-total-lbl">Subtotal</span>
+                <span class="cart-total-price" id="cart-total-price">₹0</span>
+            </div>
+            <button class="btn btn-primary checkout-btn" id="checkout-btn" disabled>
+                Proceed to Checkout <i class="fas fa-credit-card"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Booking Confirmation Modal -->
+    <div class="modal-overlay" id="reservation-modal">
+        <div class="modal-content">
+            <div class="modal-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3 class="modal-title">Booking Confirmed!</h3>
+            <p class="modal-p">Your table reservation is secured. We look forward to welcoming you into our botanical cafe!</p>
+            <div id="modal-details" style="margin-bottom: 24px;">
+                <!-- Reservation details will be populated here -->
+            </div>
+            <button class="btn btn-primary" id="close-modal" style="margin: 0 auto; display: inline-flex;">
+                Done
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-wrap">
+        <div class="container footer-grid">
+            <div>
+                <div class="logo" style="color: white; margin-bottom: 20px;">
+                    <div class="logo-icon"><i class="fas fa-coffee"></i></div>
+                    Brew & <span>Bloom</span>
+                </div>
+                <p class="footer-col-desc">Savour custom coffee blends and artisan waffles surrounded by local flora in Indrayani Nagar, Bhosari.</p>
+                <div class="footer-socials">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="footer-col-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="#home" class="footer-link">Home</a></li>
+                    <li><a href="#menu" class="footer-link">Our Menu</a></li>
+                    <li><a href="#about" class="footer-link">Our Story</a></li>
+                    <li><a href="#reserve" class="footer-link">Book a Table</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="footer-col-title">Our Delicacies</h4>
+                <ul class="footer-links">
+                    <li><a href="#menu" class="footer-link">Classic Coffee</a></li>
+                    <li><a href="#menu" class="footer-link">Belgian Waffles</a></li>
+                    <li><a href="#menu" class="footer-link">Paneer Burgers</a></li>
+                    <li><a href="#menu" class="footer-link">Smoothies</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="footer-col-title">Find Us</h4>
+                <ul class="footer-links">
+                    <li class="footer-link">Shop No. 3, Kusum Kunj</li>
+                    <li class="footer-link">Sector 1, Indrayani Nagar</li>
+                    <li class="footer-link">Bhosari, Pune - 411039</li>
+                    <li class="footer-link">Call: +91 90118 57589</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brew & Bloom Cafe. All rights reserved. Redesigned with passion from The Street Coffee.</p>
+        </div>
+    </footer>
+
+    <!-- App Logic Script -->
+    <script src="app.js?v=2"></script>
+</body>
+</html>
