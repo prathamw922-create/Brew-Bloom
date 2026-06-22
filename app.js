@@ -1,7 +1,20 @@
 // Brew & Bloom Cafe - Interactive Functionality
 
 // 1. Menu Data
-let menuItems = [];
+let menuItems = [
+  { id: 1, title: 'Classic Latte', category: 'hot-brews', price: 150, image: 'https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=500&q=80', description: 'Double shot of premium espresso with silky steamed milk and signature latte art.', rating: 4.8, badge: 'Bestseller' },
+  { id: 2, title: 'Espresso Doppio', category: 'hot-brews', price: 120, image: 'https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&q=80', description: 'Intense, aromatic double shot of custom-roasted Arabica beans.', rating: 4.6, badge: 'Classic' },
+  { id: 3, title: 'Hazelnut Cappuccino', category: 'hot-brews', price: 160, image: 'https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&q=80', description: 'Silky foam and rich espresso infused with warm, toasted hazelnut syrup.', rating: 4.7, badge: 'Popular' },
+  { id: 4, title: 'Coffee on the Rocks', category: 'cold-brews', price: 170, image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=500&q=80', description: 'Artisanal cold brew poured slowly over crystal-clear carved ice blocks.', rating: 4.9, badge: 'Specialty' },
+  { id: 5, title: 'Caramel Frappe', category: 'cold-brews', price: 190, image: 'https://images.unsplash.com/photo-1568649929103-28ffbe0cc6df?w=500&q=80', description: 'Blended cold coffee topped with whipped cream and a rich, buttery caramel drizzle.', rating: 4.7, badge: 'Sweet Touch' },
+  { id: 6, title: 'Peri Peri Paneer Burger', category: 'fast-food', price: 180, image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500&q=80', description: 'Crispy grilled paneer patty with fresh crunch, melted cheddar, and fiery house peri peri sauce.', rating: 4.9, badge: 'Trending' },
+  { id: 7, title: 'Veg Club Sandwich', category: 'fast-food', price: 140, image: 'https://images.unsplash.com/photo-1553909489-cd47e0907980?w=500&q=80', description: 'Three layers of toasted sourdough loaded with fresh vegetables, premium cheese, and herb spread.', rating: 4.5, badge: 'Snack' },
+  { id: 8, title: 'Alfredo Pasta', category: 'fast-food', price: 210, image: 'https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=500&q=80', description: 'Penne tossed in a rich, velvety parmesan white sauce with garlic, mushrooms, and herbs.', rating: 4.6, badge: 'Premium' },
+  { id: 9, title: 'Nutella Waffle', category: 'desserts', price: 160, image: 'https://images.unsplash.com/photo-1562376552-0d160a2f9fc4?w=500&q=80', description: 'Freshly baked crispy Belgian waffle topped generously with warm Nutella and fresh berries.', rating: 4.9, badge: 'Signature' },
+  { id: 10, title: 'Blueberry Cheesecake Slice', category: 'desserts', price: 180, image: 'https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=500&q=80', description: 'Creamy, rich New York-style cheesecake layered with sweet, tart blueberry compote.', rating: 4.8, badge: 'Chef Special' },
+  { id: 11, title: 'Red Velvet Smoothie', category: 'refreshers', price: 170, image: 'https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=500&q=80', description: 'Luxurious blend of vanilla cocoa, sweet strawberries, cream, and red velvet crumbles.', rating: 4.7, badge: 'Sweet Touch' },
+  { id: 12, title: 'Mint Lime Mojito', category: 'refreshers', price: 130, image: 'https://images.unsplash.com/photo-1497534446932-c925b458314e?w=500&q=80', description: 'Chilled sparkling soda muddled with fresh mint leaves, zesty key lime, and raw cane sugar.', rating: 4.5, badge: 'Refreshing' }
+];
 
 // 2. Global App State
 let cart = [];
@@ -155,8 +168,9 @@ function renderMenu(items) {
     
     items.forEach(item => {
         const menuCard = document.createElement('div');
-        menuCard.className = 'menu-card no-image';
+        menuCard.className = 'menu-card';
         menuCard.innerHTML = `
+            ${item.image ? `<div class="menu-img-wrap"><img src="${item.image}" alt="${item.title}" class="menu-img"></div>` : ''}
             <div class="menu-info">
                 <div class="menu-title-row">
                     <div class="menu-title-group">
